@@ -20,6 +20,7 @@ export default function Header() {
       backdropFilter='saturate(180%) blur(5px)'
       boxShadow='inset 0 -1px 0 0 var(--accents-2)'
       borderBottom='1px solid #f6f5f5'
+      zIndex='9999'
     >
       {/* <Heading fontSize='2xl'>FTN.DOMAINS</Heading> */}
       <Box
