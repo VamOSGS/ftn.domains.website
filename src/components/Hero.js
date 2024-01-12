@@ -41,10 +41,7 @@ export default function Hero() {
   const [index, setIndex] = React.useState(0);
 
   React.useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      1500 // every 3 seconds
-    );
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 1500);
     return () => clearTimeout(intervalId);
   }, []);
   return (
@@ -61,6 +58,7 @@ export default function Hero() {
         xl: '5xl',
       }}
       fontWeight='bold'
+      flexDir='column'
     >
       {size.width > 480 ? (
         <Flex
@@ -116,6 +114,9 @@ export default function Hero() {
           <Text> & more</Text>
         </Box>
       )}
+      <Text mt={48} fontSize='3xl' color='ActiveBorder' textAlign='center'>
+        Bahamut Name Service
+      </Text>
     </Flex>
   );
 }

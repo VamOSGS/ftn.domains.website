@@ -1,8 +1,39 @@
-import { Box, Button, Flex, Heading, Input } from '@chakra-ui/react';
+import { submitEmail } from '@/app/actions/submit';
+import { Box, Button, Flex, Heading, Input, useToast } from '@chakra-ui/react';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function WaitList() {
+  const [email, setEmail] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const toast = useToast();
+  const submitToAction = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const res = await submitEmail(email);
+    setIsLoading(false);
+    if (res.success) {
+      toast({
+        title: 'Success',
+        description: res.message,
+        status: 'success',
+        duration: 5000,
+        isClosable: true,
+      });
+      setIsSuccess(true);
+
+      return;
+    }
+    toast({
+      title: 'Error',
+      description: res.message,
+      status: 'error',
+      duration: 5000,
+      isClosable: true,
+    });
+  };
   return (
     <Flex
       flexDir='column'
@@ -30,23 +61,34 @@ export default function WaitList() {
             height={300}
           />
         </Box>
-        <Input
-          minW={{
-            base: '250px',
-            md: '300px',
-          }}
-          width={{
-            base: '280px',
-            md: '400px',
-          }}
-          margin='auto'
-          placeholder='Enter your email'
-          py={4}
-          display='block'
-        />
-        <Button mt={6} minW='150px'>
-          Join
-        </Button>
+        <form onSubmit={submitToAction}>
+          <Input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            minW={{
+              base: '250px',
+              md: '300px',
+            }}
+            width={{
+              base: '280px',
+              md: '400px',
+            }}
+            margin='auto'
+            placeholder='Enter your email'
+            py={4}
+            display='block'
+            disabled={isLoading || isSuccess}
+          />
+          <Button
+            type='submit'
+            isLoading={isLoading}
+            isDisabled={isSuccess}
+            mt={6}
+            minW='150px'
+          >
+            {isSuccess ? 'Subscribed🎉' : 'Join🔥'}
+          </Button>
+        </form>
       </Box>
     </Flex>
   );

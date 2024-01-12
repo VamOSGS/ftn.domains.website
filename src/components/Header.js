@@ -40,10 +40,10 @@ export default function Header() {
         }}
         fontSize={{
           base: 'sm',
-          md: 'xl',
+          md: 'md',
         }}
       >
-        Join the Wait list
+        Join the Wait list 🚀
       </Button>
     </Flex>
   );

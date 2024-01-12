@@ -52,7 +52,8 @@ export default function Example() {
         <Badge
           mr='2'
           fontSize={{
-            base: 'sm',
+            base: 'xs',
+            sm: 'sm',
             md: 'xl',
           }}
           variant='outline'
