@@ -39,7 +39,7 @@ export default function Example() {
         }}
         textAlign='center'
       >
-        No more copying and pasting long addresses. Use your ENS name to store
+        No more copying and pasting long addresses. Use your BNS name to store
         all of your addresses and receive any cryptocurrency, token, or NFT.
       </Text>
       <Flex
