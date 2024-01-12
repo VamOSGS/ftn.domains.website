@@ -25,7 +25,6 @@ export default function Ecosystem() {
           draggable='false'
           style={{
             userSelect: 'none',
-            MozWindowDragging: 'no-drag',
           }}
         />
       </Stack>
