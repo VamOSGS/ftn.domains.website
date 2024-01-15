@@ -19,15 +19,23 @@ export default function Footer() {
         md: '100px',
       }}
     >
-      <Heading fontSize='xl'>FTN.DOMAINS</Heading>
+      <Heading
+        fontSize='xl'
+        cursor='pointer'
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+      >
+        FTN.DOMAINS
+      </Heading>
 
       <Stack direction='row' spacing={4}>
         <a href='https://x.com/ftndomains' target='_blank'>
           Twitter
         </a>
-        <a href='#' target='_blank'>
+        {/* <a href='#' target='_blank'>
           Discord
-        </a>
+        </a> */}
         <a href='https://github.com/opengate-labs' target='_blank'>
           Github
         </a>

@@ -1,11 +1,19 @@
 import { Providers } from './providers';
 
 export const metadata = {
+  metadataBase: new URL('https://ftn.domains'),
   title: 'FTN DOMAINS',
-  description:
-    'Bahamut Name Service. Decentralised naming for Asset Wallets & more',
+  description: 'Bahamut Name Service. Decentralised naming for Wallets & more',
   keywords:
     'ftn, ens, bns, bahmut name service, fastext, opengate, ftn domains',
+  openGraph: {
+    images: '/opengraph-image.png',
+    title: 'FTN DOMAINS',
+    description:
+      'Bahamut Name Service. Decentralised naming for Wallets & more',
+    siteName: 'FTN DOMAINS',
+    url: 'https://ftn.domains',
+  },
 };
 
 export default function RootLayout({ children }) {
