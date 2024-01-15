@@ -1,3 +1,4 @@
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import { Providers } from './providers';
 
 export const metadata = {
@@ -22,7 +23,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel='icon' href='/favicon.ico' sizes='any' />
       </head>
+
       <body>
+        <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GTAG_ID} />
         <Providers>
           <main>{children}</main>
         </Providers>
