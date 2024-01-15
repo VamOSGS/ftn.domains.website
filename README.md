@@ -1,8 +1,8 @@
-# FTN.DOMAINS BNS Website
+# [FTN.DOMAINS BNS Website](https://ftn.domains)
 
 ![Vercel](https://vercelbadge.vercel.app/api/vamosgs/ftn.domains.website)
 
-![Screenshot 2024-01-15 at 13 12 01](https://github.com/opengate-labs/ftn.domains.website/assets/26979773/1e3f3346-302e-4ab1-b76a-8fe485efc58a)
+[![Screenshot 2024-01-15 at 13 12 01](https://github.com/opengate-labs/ftn.domains.website/assets/26979773/1e3f3346-302e-4ab1-b76a-8fe485efc58a)](https://ftn.domains)
 
 
 # Development
