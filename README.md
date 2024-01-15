@@ -1,3 +1,12 @@
+# FTN.DOMAINS BNS Website
+
+![Vercel](https://vercelbadge.vercel.app/api/vamosgs/ftn.domains.website)
+
+![Screenshot 2024-01-15 at 13 12 01](https://github.com/opengate-labs/ftn.domains.website/assets/26979773/1e3f3346-302e-4ab1-b76a-8fe485efc58a)
+
+
+# Development
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
